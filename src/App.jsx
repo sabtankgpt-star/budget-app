@@ -6,6 +6,7 @@ import {
   Sun, Moon, Calculator, Pencil, Flame, Award, AlertTriangle, Sparkles, Calendar, Share2, Smartphone, Info, HelpCircle, BookOpen, Lock, LogOut,
 } from 'lucide-react';
 import { supabase } from './lib/supabaseClient';
+import InstallAppButton from './components/InstallAppButton';
 
 const STORAGE_KEY = 'nazariyat-mutawassit-v3';
 
@@ -2397,6 +2398,7 @@ function Dashboard(props) {
           <span className="display text-[14px] font-bold" style={{ color: colors.paper }}>المتوسط المالي</span>
         </div>
         <div className="flex items-center gap-2">
+          <InstallAppButton />
           <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
           <button onClick={onSettings} aria-label="الإعدادات"><Settings2 size={19} color={colors.muted} /></button>
         </div>
